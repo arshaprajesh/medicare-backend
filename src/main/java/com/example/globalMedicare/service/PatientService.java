@@ -2,11 +2,9 @@ package com.example.globalMedicare.service;
 
 import java.util.Map;
 import java.io.IOException;
-import java.time.LocalDate;
-
 
 import com.example.globalMedicare.model.Patient;
-import com.example.globalMedicare.repository.AppointmentRepo;
+import com.example.globalMedicare.repository.PatientRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.http.ResponseEntity;
@@ -18,35 +16,35 @@ import org.springframework.http.HttpStatus;
 public class PatientService {
 
     @Autowired
-    private AppointmentRepo appointmentRepo;
+    private PatientRepo patientRepo;
 
     public Map<String, Object> createPatient(Patient data) throws IOException {
         Patient patient = new Patient();
-        patient.setPatient_username(data.getPatient_username());
-        patient.setPatient_password(data.getPatient_password());
-        System.out.println("getPatient_password :"+data.getPatient_password());
+        patient.setPatientUsername(data.getPatientUsername());
+        patient.setPatientPassword(data.getPatientPassword());
+        System.out.println("getPatient_password :"+data.getPatientPassword());
         patient.setCreated_by(data.getCreated_by());
         patient.setCreated_at(data.getCreated_at());
         patient.setIssued_by(data.getIssued_by());
         patient.setIssued_at(data.getIssued_at());
 
-        appointmentRepo.save(patient);
+        patientRepo.save(patient);
 
         System.out.println("patient :"+patient.toString());
 
-        System.out.println("appointmentRepo :"+appointmentRepo);
+        System.out.println("patientRepo :"+patientRepo);
 
         return Map.of(
-               "patient", Map.of("name", patient.getPatient_username(),"password",patient.getPatient_password(),"created by",patient.getCreated_by(),"created at",patient.getCreated_at(),"Issued_by",patient.getIssued_by(),"Issued_at",patient.getIssued_at())
+               "patient", Map.of("name", patient.getPatientUsername(),"password",patient.getPatientPassword(),"created by",patient.getCreated_by(),"created at",patient.getCreated_at(),"Issued_by",patient.getIssued_by(),"Issued_at",patient.getIssued_at())
         );
     }
     public ResponseEntity<?> getPatient(@PathVariable int patientId) {
         System.out.println("starting getting patient");
-        return appointmentRepo.findById(patientId)
+        return patientRepo.findById(patientId)
                 .map(patient -> ResponseEntity.ok(Map.of(
                         "patientID", patient.getPatientId(),
-                        "patient_userName", patient.getPatient_username(),
-                        "patient_password", patient.getPatient_password(),
+                        "patientUserName", patient.getPatientUsername(),
+                        "patientPassword", patient.getPatientPassword(),
                         "created_by", patient.getCreated_by(),
                         "created_at", patient.getCreated_at(),
                         "issued_by", patient.getIssued_by(),
@@ -57,5 +55,26 @@ public class PatientService {
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "patient not found")));
                 
     }
+
+    public ResponseEntity<?> login(String patientUsername, String patientPassword) {
+        System.out.println("starting login");
+
+        Patient patient = patientRepo.findByPatientUsername(patientUsername);
+        System.out.println("patient :"+patient.toString());
+
+
+        if (!patient.getPatientPassword().equals(patientPassword)) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(Map.of("error", "Invalid username or password"));
+        }
+
+        return ResponseEntity.ok(Map.of(
+                "patientId", patient.getPatientId(),
+                "username", patient.getPatientUsername()
+        ));
+}
+
+
+
 
 }

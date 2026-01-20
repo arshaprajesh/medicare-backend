@@ -43,4 +43,13 @@ public class PatientController {
         
         return patientService.getPatient(patientId);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody Map<String, String> data) {
+        String patientUsername = data.get("username");
+        String patientPassword = data.get("password");
+
+        return patientService.login(patientUsername, patientPassword);
+    }
+
 }
