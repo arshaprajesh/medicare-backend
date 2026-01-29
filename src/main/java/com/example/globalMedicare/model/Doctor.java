@@ -3,26 +3,33 @@ package com.example.globalMedicare.model;
 
 import jakarta.persistence.*;
 
+import java.sql.Date;
 import java.util.HashSet;
 
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name= "doctors")
+@Access(AccessType.FIELD)//This tells Hibernate:“Use the field annotations, not the getter names.”Now Hibernate will respect@Column(name = "doctorId") and will stop generating doctor_id.
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "doctor_id") // matches DB column
+    @Column(name = "doctorId") // matches DB column
     private int doctorId ;
 
-    private String doctor_username;
-    private String doctor_password;
+    private String doctorName;
     private String type;
     private String location;
+    private Date date ;
+    private int fee ;
 
+    
 
 
     @ManyToMany(mappedBy = "doctors")
+    @JsonIgnore
     private Set<AppointmentDetail> appointments = new HashSet<>();
 
 
@@ -30,20 +37,12 @@ public class Doctor {
         return doctorId;
     }
 
-    public String getDoctor_username() {
-        return doctor_username;
+    public String getDoctorName() {
+        return doctorName;
     }
 
-    public void setDoctor_username(String doctor_username) {
-        this.doctor_username = doctor_username;
-    }
-
-    public String getDoctor_password() {
-        return doctor_password;
-    }
-
-    public void setDoctor_password(String doctor_password) {
-        this.doctor_password = doctor_password;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
     public String getType() {
@@ -61,12 +60,42 @@ public class Doctor {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public int getFee() {
+        return fee;
+    }
+
+    public void setFee(int fee) {
+        this.fee = fee;
+    }
+
     public Set<AppointmentDetail> getAppointments() {
         return appointments;
     }
 
     public void setAppointments(Set<AppointmentDetail> appointments) {
         this.appointments = appointments;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "doctorId=" + doctorId +
+                ", doctorName='" + doctorName + '\'' +
+                ", type='" + type + '\'' +
+                ", location='" + location + '\'' +
+                ", date=" + date +
+                ", fee=" + fee +
+                '}';
     }
 
 }

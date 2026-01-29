@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/patientDetails")
+
+
 public class PatientController {
 
     @Autowired
@@ -29,10 +31,10 @@ public class PatientController {
             System.out.println("result: " + result);
             return ResponseEntity.status(HttpStatus.CREATED).body(result);
         } catch (IOException e) {
-            e.printStackTrace();
+
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "Patient not found"));
         } catch (Exception e) {
-            e.printStackTrace();
+
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(Map.of("error", e.getMessage()));
         }
@@ -40,7 +42,7 @@ public class PatientController {
 
     @GetMapping("/{patientId}")
     public ResponseEntity<?> getPatient(@PathVariable int patientId) {
-        
+
         return patientService.getPatient(patientId);
     }
 

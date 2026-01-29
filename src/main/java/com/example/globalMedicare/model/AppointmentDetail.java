@@ -11,27 +11,27 @@ import java.util.Set;
 public class AppointmentDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "appointment_id") // matches DB column
+    @Column(name = "appointmentId") // matches DB column
 
-    private int appointment_id ;
+    private int appointmentId ;
 
     private Date appointment_date;
     private String appointment_location;
 
     @ManyToOne  //mapping with patients
-    @JoinColumn(name = "patient_id", referencedColumnName = "patient_id") // match foreign key
+    @JoinColumn(name = "patientId", referencedColumnName = "patient_id") // match foreign key
     private Patient patient;
 
-    @ManyToMany  //mapping with doctors using join table doctor_appointments
+    @ManyToMany //mapping with doctors using join table doctor_appointments
     @JoinTable(
             name = "doctor_appointments",
-            joinColumns = @JoinColumn(name = "appointment_id"),
-            inverseJoinColumns = @JoinColumn(name = "doctor_id")
+            joinColumns = @JoinColumn(name = "appointmentId"),
+            inverseJoinColumns = @JoinColumn(name = "doctorId")
     )
     private Set<Doctor> doctors = new HashSet<>();
 
-    public int getAppointment_id() {
-        return appointment_id;
+    public int getAppointmentId() {
+        return appointmentId;
     }
 
     public Date getAppointment_date() {
@@ -64,5 +64,7 @@ public class AppointmentDetail {
     public void setDoctors(Set<Doctor> doctors) {
         this.doctors = doctors;
     }
+
+    
 
 }

@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name= "patients")
 public class Patient {
@@ -15,13 +17,17 @@ public class Patient {
     private int patientId ;
 
     private String patientUsername;
+
+    @JsonIgnore
     private String patientPassword;
     private String created_by;
     private Date created_at;
     private String issued_by;
     private Date issued_at;
 
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "patient")
+
+    @JsonIgnore
     private Set<AppointmentDetail> appointments = new HashSet<>();
 
     public int getPatientId() {

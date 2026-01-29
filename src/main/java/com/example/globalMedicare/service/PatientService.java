@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.HttpStatus;
+import java.util.List;
 
 
 @Service
@@ -19,6 +20,7 @@ public class PatientService {
     private PatientRepo patientRepo;
 
     public Map<String, Object> createPatient(Patient data) throws IOException {
+
         Patient patient = new Patient();
         patient.setPatientUsername(data.getPatientUsername());
         patient.setPatientPassword(data.getPatientPassword());
@@ -35,7 +37,7 @@ public class PatientService {
         System.out.println("patientRepo :"+patientRepo);
 
         return Map.of(
-               "patient", Map.of("name", patient.getPatientUsername(),"password",patient.getPatientPassword(),"created by",patient.getCreated_by(),"created at",patient.getCreated_at(),"Issued_by",patient.getIssued_by(),"Issued_at",patient.getIssued_at())
+               "patient", Map.of("name", patient.getPatientUsername(),"created by",patient.getCreated_by(),"created at",patient.getCreated_at(),"Issued_by",patient.getIssued_by(),"Issued_at",patient.getIssued_at())
         );
     }
     public ResponseEntity<?> getPatient(@PathVariable int patientId) {
@@ -44,7 +46,7 @@ public class PatientService {
                 .map(patient -> ResponseEntity.ok(Map.of(
                         "patientID", patient.getPatientId(),
                         "patientUserName", patient.getPatientUsername(),
-                        "patientPassword", patient.getPatientPassword(),
+                        //"patientPassword", patient.getPatientPassword(),
                         "created_by", patient.getCreated_by(),
                         "created_at", patient.getCreated_at(),
                         "issued_by", patient.getIssued_by(),
@@ -59,22 +61,32 @@ public class PatientService {
     public ResponseEntity<?> login(String patientUsername, String patientPassword) {
         System.out.println("starting login");
 
-        Patient patient = patientRepo.findByPatientUsername(patientUsername);
-        System.out.println("patient :"+patient.toString());
+        List<Patient> patients = patientRepo.findByPatientUsername(patientUsername);
+       
+        
 
-
-        if (!patient.getPatientPassword().equals(patientPassword)) {
+        if (patients.isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(Map.of("error", "Invalid username or password"));
         }
+        
 
-        return ResponseEntity.ok(Map.of(
-                "patientId", patient.getPatientId(),
-                "username", patient.getPatientUsername()
+       for (Patient p : patients) {
+        if (p.getPatientPassword().equals(patientPassword)) {
+                return ResponseEntity.ok(Map.of(
+                        "patientId", p.getPatientId(),
+                        "username", p.getPatientUsername()
+                
         ));
+    }
+}
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+        .body(Map.of("error", "Invalid username or password")); }
 }
 
 
 
 
-}
+
+
