@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: globalmedicare-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: globalmedicare-backend
+  template:
+    metadata:
+      labels:
+        app: globalmedicare-backend
+    spec:
+      containers:
+        - name: backend
+          image: globalmedicare-backend:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8084
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://globalmedicare-db:3306/medicare
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: root
