@@ -17,7 +17,7 @@ pipeline {
          }
          stage('Build') {
              steps {
-                 sh 'maven clean package -DskipTests'
+                 sh './mvn clean package -DskipTests'
                  echo 'JAR built successfully.'
 
              }
