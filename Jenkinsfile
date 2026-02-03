@@ -9,7 +9,7 @@ pipeline {
      stages {
          stage('Clone') {
              steps {
-                 git 'https://github.com/arshaprajesh/medicare.git'
+                 git branch: 'feature/addAppointment', url: 'https://github.com/arshaprajesh/medicare.git'
                  echo 'Repository cloned. Working from root directory.'
 
 
