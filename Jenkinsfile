@@ -1,5 +1,5 @@
 pipeline {
-     agent only
+     agent any
 
      environment {
          IMAGE = "globalmedicare-backend"
