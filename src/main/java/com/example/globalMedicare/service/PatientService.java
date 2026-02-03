@@ -62,8 +62,6 @@ public class PatientService {
         System.out.println("starting login");
 
         List<Patient> patients = patientRepo.findByPatientUsername(patientUsername);
-       
-        
 
         if (patients.isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
@@ -80,7 +78,6 @@ public class PatientService {
         ));
     }
 }
-
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
         .body(Map.of("error", "Invalid username or password")); }
 }

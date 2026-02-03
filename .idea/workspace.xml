@@ -5,39 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfeb3ced-0b30-4ed1-b718-b7b828b1c182" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GlobalMedicare2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/backend-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/backend-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/database-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/database-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/AppointmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/AppointmentDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/AppointmentDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/repository/PatientRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/repository/PatientRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/AppointmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/DoctorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/PatientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/GlobalMedicareApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/GlobalMedicareApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/config/CorsConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/config/CorsConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/config/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/AppointmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/AppointmentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/DoctorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/PatientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/model/AppointmentDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/model/AppointmentDetail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/model/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/model/Doctor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/model/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/model/Patient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/repository/PatientRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/repository/PatientRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/AppointmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/AppointmentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/DoctorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/DoctorService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/PatientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.globalMedicare.GlobalMedicareApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.globalMedicare.GlobalMedicareApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.globalMedicare.GlobalMedicareApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.globalMedicare.GlobalMedicareApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/GlobalMedicareApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/GlobalMedicareApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +68,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/frontend",
     "last_opened_file_path": "/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2",
     "project.structure.last.edited": "Modules",
