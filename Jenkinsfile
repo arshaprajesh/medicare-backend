@@ -11,8 +11,20 @@ pipeline {
              steps {
                  git branch: 'feature/addAppointment', url: 'https://github.com/arshaprajesh/medicare.git'
                  echo 'Repository cloned. Working from root directory.'
-
-
+             }
+         }
+         stage('Ensure KIND Cluster Exists') {
+             steps {
+                 echo 'Checking for existing KIND cluster...'
+                 sh '''
+                      if kind get clusters | grep -q "kind"; then
+                          echo "KIND cluster already exists. Continuing..."
+                      else
+                          echo "No cluster found. Creating new KIND cluster..."
+                          kind create cluster
+                          echo "KIND cluster created successfully."
+                      fi
+                 '''
              }
          }
          stage('Build') {
