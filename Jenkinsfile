@@ -13,7 +13,7 @@ pipeline {
                  echo 'Repository cloned. Working from root directory.'
              }
          }
-         stage('Ensure KIND Cluster Exists') {
+         /*stage('Ensure KIND Cluster Exists') {
              steps {
                  echo 'Checking for existing KIND cluster...'
                  sh '''
@@ -26,7 +26,7 @@ pipeline {
                       fi
                  '''
              }
-         }
+         }*/
          stage('Build') {
              steps {
                  sh './mvnw clean package -DskipTests'
