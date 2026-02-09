@@ -8,8 +8,8 @@ pipeline {
                 sh '''
                     if kind get clusters | grep -q "kind"; then
                         echo "KIND cluster found. Deleting..."
-                        kind delete cluster
-                        echo "KIND cluster deleted successfully."
+                            kind delete cluster
+                            echo "KIND cluster deleted successfully."
                     else
                         echo "No KIND cluster found. Skipping delete."
                     fi

@@ -1,1 +1,10 @@
 /Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/GlobalMedicareApplicationTests.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/service/DoctorServiceTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/repository/PatientRepoTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/controller/DoctorControllerTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/controller/PatientControllerTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/service/PatientServiceTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/controller/AppointmentControllerTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/repository/DoctorRepoTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/service/AppointmentServiceTest.java
+/Users/arshabk/Documents/arsha/Workspace/Medicare/BackEnd/GlobalMedicare/GlobalMedicare2/src/test/java/com/example/globalMedicare/repository/AppointmentRepoTest.java

@@ -10,6 +10,8 @@ import com.example.globalMedicare.repository.AppointmentRepo;
 import com.example.globalMedicare.repository.DoctorRepo;
 import com.example.globalMedicare.repository.PatientRepo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,8 @@ import org.springframework.stereotype.Service;
 public class AppointmentService {
 
 
-    @Autowired 
+    private static final Logger log = LoggerFactory.getLogger(AppointmentService.class);
+    @Autowired
     private AppointmentRepo appointmentRepo;
 
      @Autowired 
@@ -30,25 +33,33 @@ public class AppointmentService {
 
 
     public AppointmentDetail makeAppointment(int doctorId, int patientId,String location, Date date ){
-        
-        AppointmentDetail appointment=new AppointmentDetail();
+        log.info("Creating appointment: doctorId={}, patientId={}, location={}, date={}", doctorId, patientId, location, date);
+
+        try {
+
+            Patient patient = patientRepo.findById(patientId)
+                    .orElseThrow(() -> new RuntimeException("Patient not found"));
+            Doctor doctor = doctorRepo.findById(doctorId)
+                    .orElseThrow(() -> new RuntimeException("Doctor not found"));
 
 
 
-        Patient patient = patientRepo.getReferenceById(patientId); 
-        Doctor doctor = doctorRepo.getReferenceById(doctorId);
+            AppointmentDetail appointment=new AppointmentDetail();
+            appointment.setPatient(patient);
+            appointment.getDoctors().add(doctor);
+            appointment.setAppointment_date(date);
+            appointment.setAppointment_location(location);
 
-        appointment.setPatient(patient); 
-        appointment.getDoctors().add(doctor);
+            AppointmentDetail saved = appointmentRepo.save(appointment);
+            log.info("Appointment created successfully with ID: {}", saved.getAppointmentId());
+            return saved;
 
-        appointment.setAppointment_date(date); 
-        appointment.setAppointment_location(location);
 
-        /*AppointmentDetail appointmentDetailVal = appointmentRepo.save(appointment);
+        } catch (Exception e) {
+            log.error("Error creating appointment for doctorId={} and patientId={}: {}", doctorId, patientId, e.getMessage(), e);
 
-        return appointmentDetailVal;*/
-
-        return appointmentRepo.save(appointment);
+            throw new RuntimeException("Failed to create appointment");
+        }
     }
 
 }
