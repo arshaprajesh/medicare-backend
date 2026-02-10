@@ -26,8 +26,8 @@ public class DoctorService {
 
     // static cache map
     public static Map<String, List<Doctor>> doctorcache = new HashMap<>();
-     
-    
+
+
     @PostConstruct
     public void loadDoctorCache() {
         log.info("Loading doctor cache from database...");

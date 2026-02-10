@@ -25,6 +25,7 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
+
     @GetMapping("/types") 
     public Set<String> getDoctorTypes() {
         log.info("Fetching all doctor types");
@@ -52,6 +53,10 @@ public class DoctorController {
             throw new RuntimeException("Failed to fetch doctors by type");
         }
     }
-    
+    @GetMapping("/reload")
+    public String reloadCache() {
+        doctorService.loadDoctorCache();
+        return "Doctor cache reloaded successfully";
+    }
 
 }

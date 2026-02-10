@@ -5,55 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfeb3ced-0b30-4ed1-b718-b7b828b1c182" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/controller/AppointmentControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/controller/DoctorControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/controller/PatientControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/repository/AppointmentRepoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/repository/DoctorRepoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/repository/PatientRepoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/service/AppointmentServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/service/DoctorServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/globalMedicare/service/PatientServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/controller/AppointmentControllerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/controller/DoctorControllerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/controller/PatientControllerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/repository/AppointmentRepoTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/repository/DoctorRepoTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/repository/PatientRepoTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/service/AppointmentServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/service/DoctorServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/globalMedicare/service/PatientServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/tests/doctorRegistration.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/tests/loginPatient.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/tests/makeAppointment.test.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete-cluster/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/delete-cluster/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/backend-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/backend-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/AppointmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/DoctorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/AppointmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/AppointmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/DoctorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/PatientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/AppointmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/AppointmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/DoctorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/DoctorService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/PatientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.globalMedicare.GlobalMedicareApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.globalMedicare.GlobalMedicareApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/components/patient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/components/patient.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

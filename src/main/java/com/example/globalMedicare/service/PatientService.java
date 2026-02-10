@@ -59,35 +59,31 @@ public class PatientService {
 
     }
     public ResponseEntity<?> getPatient(@PathVariable int patientId) {
-
         log.info("Fetching patient with ID: {}", patientId);
-
         try {
+            System.out.println("starting getting patient");
+
             return patientRepo.findById(patientId)
-                    .map(patient -> {
-                        log.info("Patient found: {}", patient.getPatientUsername());
+                    .map(patient ->
+                            ResponseEntity.ok(Map.of(
+                            "patientID", patient.getPatientId(),
+                            "patientUserName", patient.getPatientUsername(),
+                            //"patientPassword", patient.getPatientPassword(),
+                            "created_by", patient.getCreated_by(),
+                            "created_at", patient.getCreated_at(),
+                            "issued_by", patient.getIssued_by(),
+                            "issued_at", patient.getIssued_at()
 
-                        return ResponseEntity.ok(Map.of(
-                                "patientID", patient.getPatientId(),
-                                "patientUserName", patient.getPatientUsername(),
-                                "created_by", patient.getCreated_by(),
-                                "created_at", patient.getCreated_at(),
-                                "issued_by", patient.getIssued_by(),
-                                "issued_at", patient.getIssued_at()
-                        ));
-                    })
-                    .orElseGet(() -> {
-                        log.warn("Patient not found with ID: {}", patientId);
-                        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                                .body(Map.of("error", "patient not found"));
-                    });
+                    )))
 
+                    .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "patient not found")));
         } catch (Exception e) {
             log.error("Error retrieving patient {}: {}", patientId, e.getMessage(), e);
             throw new RuntimeException("Failed to fetch patient");
         }
-    }
 
+
+    }
 
     public ResponseEntity<?> login(String patientUsername, String patientPassword) {
         log.info("Login attempt for username: {}", patientUsername);

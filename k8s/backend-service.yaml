@@ -8,7 +8,7 @@ spec:
     app: globalmedicare-backend
   ports:
     - protocol: TCP
-      port: 8084
-      targetPort: 8084
+      port: 30084
+      targetPort: 30084
       nodePort: 30084
 
