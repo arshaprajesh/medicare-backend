@@ -1,0 +1,10 @@
+com/example/globalMedicare/controller/AppointmentControllerTest.class
+com/example/globalMedicare/controller/PatientControllerTest.class
+com/example/globalMedicare/repository/AppointmentRepoTest.class
+com/example/globalMedicare/GlobalMedicareApplicationTests.class
+com/example/globalMedicare/service/AppointmentServiceTest.class
+com/example/globalMedicare/service/PatientServiceTest.class
+com/example/globalMedicare/repository/PatientRepoTest.class
+com/example/globalMedicare/service/DoctorServiceTest.class
+com/example/globalMedicare/controller/DoctorControllerTest.class
+com/example/globalMedicare/repository/DoctorRepoTest.class
