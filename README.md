@@ -20,7 +20,14 @@ backend:
 
 <img width="772" height="640" alt="image" src="https://github.com/user-attachments/assets/014f3b6b-902e-4b4e-a5be-3d84b7310540" />
 
+
+
+
+
+
 frontend:
+
+
 
 
 second page:
