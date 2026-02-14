@@ -79,7 +79,67 @@ Docker Hub Account
 
 Git + GitHub
 
-Clone the Repository:
+->Clone the Repository:
+https://github.com/arshaprajesh/medicare-backend.git
+
+->Update application.properties with your DB credentials
+
+->**Build the backend:**
+mvn clean install
+->**Run the backend:**
+mvn spring-boot:run
+
+->Test in Postman:
+
+**test in EKS/Kind**
+
+kind = Kubernetes cluster running inside Docker.
+
+1. Create a kind cluster
+kind create cluster
+
+2. Build backend and frontend image locally
+docker build -t globalmedicare-backend:latest .
+docker build -t globalmedicare-frontend:latest .
+
+
+4. Load image into kind
+kind load docker-image globalmedicare-backend:latest
+kind load docker-image globalmedicare-frontend:latest
+
+
+6. Apply Kubernetes manifests
+kubectl apply -f k8s/
+
+** Import MySQL database into Kubernetes**
+
+kubectl cp medicare.sql globalmedicare-db-<pod>:/tmp/medicare.sql
+
+Enter MySQL pod:
+kubectl exec -it globalmedicare-db-<pod> -- sh
+
+Import:
+mysql -u root -proot medicare < /tmp/medicare.sql
+
+
+**Automation (CI/CD Pipeline)**
+
+1. Developer pushes code to GitHub
+ 2. Jenkins automatically pulls the latest code
+3. Install Required Jenkins Plugins
+
+Git plugin
+
+Pipeline plugin
+
+Docker plugin
+
+Kubernetes plugin
+
+4. Create Jenkins Pipeline Job (Backend + Frontend)
+5. Add Docker Hub Credentials to Jenkins
+6. Connect Jenkins to Kubernetes
+  
 
 
 
