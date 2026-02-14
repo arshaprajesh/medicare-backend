@@ -1,6 +1,8 @@
 Global Medicare – Full‑Stack Healthcare Platform
 A complete end‑to‑end healthcare application built with Spring Boot, React, MySQL, Docker, Kubernetes (kind), and Jenkins CI/CD automation.
 This project demonstrates real‑world backend engineering, frontend development, containerization, Kubernetes deployment, and automated DevOps pipelines.
+
+
 🚀 Features
 🩺 Healthcare Functionality
 Patient registration & login
