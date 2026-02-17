@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfeb3ced-0b30-4ed1-b718-b7b828b1c182" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/model/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/backend-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/backend-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/DoctorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/globalMedicare/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/service/PatientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/globalMedicare-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/components/patient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/src/components/patient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/globalMedicare/controller/DoctorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FrontEnd/MedicareFrontend/globalmedicare-app/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
