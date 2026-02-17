@@ -98,7 +98,6 @@ public class Payment {
         this.appointment = appointment;
     }
 
-
     @Override
     public String toString() {
         return "Payment{" +
