@@ -1,27 +1,38 @@
 package com.example.globalMedicare.model;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "payments")
+@Table(name = "payment")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Payment {
 
+    public Payment() {}
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "payment_id")
-
     private int paymentId;
+
     private String holderName;
+
+    @JsonProperty("cardName")
     private String cardName;
+
+    @JsonProperty("cardNumber")
     private String cardNumber;
 
-
-
+    @JsonProperty("expiryDate")
     private String expiryDate;
+
+    @JsonProperty("cvv")
     private String cvv;
+
     private Long doctorFee;
+
     private Long totalAmount;
 
 
@@ -31,6 +42,10 @@ public class Payment {
 
     public int getPaymentId() {
         return paymentId;
+    }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
     }
 
 

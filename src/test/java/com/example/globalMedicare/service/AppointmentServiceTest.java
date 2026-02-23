@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.sql.Date;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -49,8 +50,8 @@ class AppointmentServiceTest {
         doctor.setType("Cardiology");
 
         // Mock repo behavior
-        when(patientRepo.getReferenceById(patientId)).thenReturn(patient);
-        when(doctorRepo.getReferenceById(doctorId)).thenReturn(doctor);
+        when(patientRepo.findById(patientId)).thenReturn(Optional.of(patient));
+        when(doctorRepo.findById(doctorId)).thenReturn(Optional.of(doctor));
 
         AppointmentDetail saved = new AppointmentDetail();
         saved.setAppointment_location(location);
@@ -75,8 +76,8 @@ class AppointmentServiceTest {
 
     @Test
     void testMakeAppointmentPatientNotFound() {
-        when(patientRepo.getReferenceById(1))
-                .thenThrow(new RuntimeException("Patient not found"));
+        when(patientRepo.findById(1))
+                .thenReturn(Optional.empty());
 
         assertThrows(RuntimeException.class, () ->
                 appointmentService.makeAppointment(10, 1, "NYC", Date.valueOf("2026-02-01"))
@@ -88,9 +89,9 @@ class AppointmentServiceTest {
         Patient patient = new Patient();
         patient.setPatientUsername("john");
 
-        when(patientRepo.getReferenceById(1)).thenReturn(patient);
-        when(doctorRepo.getReferenceById(10))
-                .thenThrow(new RuntimeException("Doctor not found"));
+        when(patientRepo.findById(1)).thenReturn(Optional.of(patient));
+        when(doctorRepo.findById(10))
+                .thenReturn(Optional.empty());
 
         assertThrows(RuntimeException.class, () ->
                 appointmentService.makeAppointment(10, 1, "NYC", Date.valueOf("2026-02-01"))
