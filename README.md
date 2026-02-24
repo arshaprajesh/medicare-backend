@@ -8,7 +8,7 @@ This project demonstrates real‑world backend engineering, frontend development
 Patient registration & login
 Search by type
 Appointment booking
-Payment workflow(in progress)
+Payment workflow
 REST APIs for all backend operations
 
 **databse:**
