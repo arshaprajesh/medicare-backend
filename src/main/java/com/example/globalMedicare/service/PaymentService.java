@@ -26,6 +26,7 @@ public class PaymentService {
         // 2. Create new payment object
         Payment payment = new Payment();
         // 3. Copy card details from request body
+         payment.setHolderName(data.getHolderName());
          payment.setCardName(data.getCardName());
          payment.setCardNumber(data.getCardNumber());
          payment.setExpiryDate(data.getExpiryDate());
@@ -34,11 +35,6 @@ public class PaymentService {
         // 2. Set appointment in data
 
         payment.setAppointment(appointment);
-
-        //fetch patient name from appointment(appointment have patient details (   private Patient patient)
-
-        String patientName = appointment.getPatient().getPatientUsername();
-        payment.setHolderName(patientName);
 
         //fetch fee from appointment(in AppointmentDetails(private Set<Doctor> doctors = new HashSet<>();)s0 we cant fetch directly ,need to do looping)
 
