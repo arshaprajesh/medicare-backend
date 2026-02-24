@@ -13,7 +13,8 @@ REST APIs for all backend operations
 
 **databse:**
 
-<img width="633" height="393" alt="image" src="https://github.com/user-attachments/assets/6f0d7b29-9c2e-4896-9fb3-ec8595661c54" />
+<img width="479" height="516" alt="image" src="https://github.com/user-attachments/assets/6740bf77-b566-455e-8348-2c3f85a9f2df" />
+
 <img width="461" height="193" alt="image" src="https://github.com/user-attachments/assets/8e92136b-65c2-4ecd-9a85-3b519fe28f04" />
 
 **backend:**
