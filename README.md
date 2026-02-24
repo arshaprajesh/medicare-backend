@@ -15,7 +15,7 @@ REST APIs for all backend operations
 
 <img width="479" height="516" alt="image" src="https://github.com/user-attachments/assets/6740bf77-b566-455e-8348-2c3f85a9f2df" />
 
-<img width="461" height="193" alt="image" src="https://github.com/user-attachments/assets/8e92136b-65c2-4ecd-9a85-3b519fe28f04" />
+
 
 **backend:**
 
