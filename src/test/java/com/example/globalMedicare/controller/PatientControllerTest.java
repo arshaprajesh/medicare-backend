@@ -142,8 +142,6 @@ class PatientControllerTest {
                         .body(Map.of("error", "Invalid username or password")));
 
 
-
-
         String json = """
                 {
                   "username": "john",
