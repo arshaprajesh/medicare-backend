@@ -17,7 +17,7 @@ public class Payment {
     @Column(name = "payment_id")
     private int paymentId;
 
-    @JsonProperty("cardName")
+    @JsonProperty("holderName")
     private String holderName;
 
     @JsonProperty("cardName")
