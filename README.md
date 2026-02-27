@@ -84,7 +84,7 @@ Docker Hub Account
 Git + GitHub
 
 ->Clone the Repository:
-https://github.com/arshaprajesh/medicare-backend.git
+https://github.com/arshaprajesh/medicare-backend-springboot.git
 
 ->Update application.properties with your DB credentials
 
